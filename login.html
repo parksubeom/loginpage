@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.4.1.js"></script>
+</head>
+
+
+
+<body>
+
+<SECTION CLASS="login_form">
+<h1 class="logo_form">스파르타코딩클럽</h1><h1 class="logo_form">공모전</h1><h1 class="logo_form">로그인페이지</h1>
+  <FORM ACTION="">
+    <div class="int-area">
+      <input type="text" name="id" id="id"
+             autocomplete="off" required>
+      <label for="id">USER NAME</label>
+    </div>
+    <div class="int-area">
+      <input type="password" name="pw" id="pw"
+             autocomplete="off" required>
+      <label for="pw">PASSWORD</label>
+
+
+    </div>
+    <div class="btn-area">
+      <button type="submit"><a href="https://www.instagram.com/d_s_c_l/">Login</a></button>
+    </div>
+  </FORM>
+  <div class="caption">
+    <a href="">Forgot Password?</a>
+  </div>
+
+
+</SECTION>
+
+<script>
+    let id = $('#id');
+    let pw = $('#pw');
+    let btn = $('#btn');
+
+    $(btn).on('click', function () {
+      if($(id).val() == "") {
+        $(id).next('label').addclass('warning');
+        setTimeout(function () {
+          $('label').removeClass('warning');
+        },1500);
+      }
+      else if($(pw).val() == '') {
+        $(pw).next('label').addclass('warning');
+         setTimeout(function () {
+          $('label').removeClass('warning');
+        },1500);
+      }
+    });
+</script>
+
+
+</body>
+</html>
